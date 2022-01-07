@@ -26,7 +26,7 @@ function expressionToPoints(expr) {
 async function parseCommand(cmd) {
   cmd = cmd.replace(/\s+/g, '').toLowerCase();
 
-  commandRegex = /^image\d+,\d+,\d+(|"|inch|in|mm|cm)[x*]\d+(|"|inch|in|mm|cm)$/;
+  commandRegex = /^image\d+,\d+,[\d.]+(|"|inch|in|mm|cm)[x*][\d.]+(|"|inch|in|mm|cm)$/;
   if (!commandRegex.test(cmd)) {
     throw 'Cannot recognise the command!';
   }

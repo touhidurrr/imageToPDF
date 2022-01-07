@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="lib/pdfkit.standalone.js"></script>
+    <script type="text/javascript" src="lib/blob-stream.js"></script>
+    <script type="text/javascript" src="src/main.js"></script>
+  </head>
+  <body>
+    <div>
+      <label for="files">Select files:</label>
+      <input type="file" id="files" name="files" multiple /><br /><br />
+      <div id="errors"></div>
+      <div>
+        Commands:<br />
+        <textarea
+          id="commands"
+          cols="50"
+          rows="8"
+          placeholder="image<serial>, <count>, <size>"
+        ></textarea>
+      </div>
+      <br />
+      <input type="submit" onclick="makePDF();" />
+    </div>
+  </body>
+</html>

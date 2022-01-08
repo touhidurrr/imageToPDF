@@ -28,7 +28,7 @@ async function parseCommand(cmd) {
 
   commandRegex = /^image\d+,\d+,[\d.]+(|"|inch|in|mm|cm)[x*][\d.]+(|"|inch|in|mm|cm)$/;
   if (!commandRegex.test(cmd)) {
-    throw 'Cannot recognise the command!';
+    throw 'Cannot recognize the command!';
   }
 
   let [image, count, size] = cmd.split(',');
@@ -47,12 +47,12 @@ async function parseCommand(cmd) {
 
   width = expressionToPoints(width);
   if (width > a4width) {
-    throw 'Max allowed width ${a4width}, given ${width}';
+    throw 'Max allowed width ${a4width}, given ${width} ...';
   }
 
   height = expressionToPoints(height);
   if (height > a4height) {
-    throw 'Max allowed height ${a4height}, given ${height}';
+    throw 'Max allowed height ${a4height}, given ${height} ...';
   }
 
   return { fileBuffer, count, width, height };

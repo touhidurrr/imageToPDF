@@ -47,12 +47,12 @@ async function parseCommand(cmd) {
 
   width = expressionToPoints(width);
   if (width > a4width) {
-    throw 'Max allowed width ${a4width}, given ${width} ...';
+    throw `Max allowed width ${a4width}, given ${width} ...`;
   }
 
   height = expressionToPoints(height);
   if (height > a4height) {
-    throw 'Max allowed height ${a4height}, given ${height} ...';
+    throw `Max allowed height ${a4height}, given ${height} ...`;
   }
 
   return { fileBuffer, count, width, height };

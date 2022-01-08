@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width">
     <script type="text/javascript" src="lib/pdfkit.standalone.js"></script>
     <script type="text/javascript" src="lib/blob-stream.js"></script>
     <script type="text/javascript" src="src/main.js"></script>
@@ -8,10 +9,10 @@
   <body>
     <div>
       <label for="files">Select files:</label>
-      <input type="file" id="files" name="files" multiple /><br /><br />
+      <input type="file" id="files" name="files" multiple><br><br>
       <div id="errors"></div>
       <div>
-        Commands:<br />
+        Commands:<br>
         <textarea
           id="commands"
           cols="50"
@@ -19,8 +20,8 @@
           placeholder="image<serial>, <count>, <size>"
         ></textarea>
       </div>
-      <br />
-      <input type="submit" onclick="makePDF();" />
+      <br>
+      <input type="submit" onclick="makePDF();">
     </div>
   </body>
 </html>

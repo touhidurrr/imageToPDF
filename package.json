@@ -4,6 +4,7 @@
     "brfs": "x",
     "browserify": "x",
     "pdfkit": "x",
-    "tinyify": "x"
+    "tinyify": "x",
+    "uglify-js": "x"
   }
 }

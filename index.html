@@ -7,21 +7,20 @@
     <script type="text/javascript" src="src/main.js"></script>
   </head>
   <body>
-    <div>
+    <p>
       <label for="files">Select files:</label>
-      <input type="file" id="files" name="files" multiple><br><br>
-      <div id="errors"></div>
-      <div>
-        Commands:<br>
-        <textarea
-          id="commands"
-          cols="50"
-          rows="8"
-          placeholder="image<serial>, <count>, <size>"
-        ></textarea>
-      </div>
-      <br>
-      <input type="submit" onclick="makePDF();">
-    </div>
+      <input type="file" id="files" name="files" multiple>
+    </p>
+    <p id="errors"></p>
+    <p>
+      Commands:
+      <textarea
+        id="commands"
+        cols="50"
+        rows="8"
+        placeholder="image<serial>, <count>, <size>"
+      ></textarea>
+    </p>
+    <input type="submit" onclick="makePDF();">
   </body>
 </html>

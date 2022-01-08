@@ -17,7 +17,7 @@ function expressionToPoints(expr) {
     if (expr.endsWith(unit)) {
       unitToPoints = unitsToPointsList[unit];
       expr = expr.slice(0, -unit.length);
-      continue;
+      break;
     }
   }
   return Number(expr) * unitToPoints * pdfSizeModifier;

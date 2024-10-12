@@ -1,0 +1,11 @@
+node_modules/
+
+# dist
+public/lib/
+public/main.js
+
+# lockfiles
+bun.lockb
+yarn.lock
+pnpm-lock.yaml
+package-lock.json

@@ -1,6 +1,6 @@
 {
   "name": "image-to-pdf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Md. Touhidur Rahman",
   "description": "Converts images to PDF",
   "main": "src/index.ts",

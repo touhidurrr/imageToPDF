@@ -15,7 +15,7 @@
   "devDependencies": {
     "@types/blob-stream": "^0.1.33",
     "@types/bun": "^1.1.11",
-    "@types/pdfkit": "^0.13.5",
+    "@types/pdfkit": "^0.14.0",
     "brfs": "^2.0.2",
     "browserify": "^17.0.1",
     "prettier": "^3.3.3",

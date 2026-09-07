@@ -1,12 +1,8 @@
-import type TPDFDocument from "pdfkit";
-import type TblobStream from "blob-stream";
+import { PDFDocument, registerStdFonts } from "pdfkit";
+import { toBlob } from "pdfkit/output";
+import Helvetica from "pdfkit/standard-fonts/Helvetica";
 
-// globals
-declare global {
-  const PDFDocument: typeof TPDFDocument;
-  const blobStream: typeof TblobStream;
-  function makePDF(): Promise<void>;
-}
+registerStdFonts(Helvetica);
 
 let CommandsInput: HTMLTextAreaElement | null = null;
 let ErrorLogger: HTMLParagraphElement | null = null;
@@ -82,7 +78,8 @@ async function parseCommand(cmd: string) {
   return { fileBuffer, count, width, height };
 }
 
-window.makePDF = async () => {
+const makePDF = async () => {
+  console.log("makePDF called");
   populateGlobals();
 
   const Commands = CommandsInput!.value.trim();
@@ -103,11 +100,7 @@ window.makePDF = async () => {
 
   const pdf = new PDFDocument({ size: "A4", margin: 0 });
 
-  const PDFStream = pdf.pipe(blobStream());
-  PDFStream.on("finish", function () {
-    const url = PDFStream.toBlobURL("application/pdf");
-    window.open(url);
-  });
+  const pdfOutput = toBlob(pdf);
 
   let x = pdfSpacing;
   let y = pdfSpacing;
@@ -134,4 +127,9 @@ window.makePDF = async () => {
   }
 
   pdf.end();
+
+  const url = URL.createObjectURL(await pdfOutput);
+  window.open(url);
 };
+
+document.getElementById("renderPDFButton")?.addEventListener("click", makePDF);

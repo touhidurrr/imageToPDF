@@ -1,11 +1,9 @@
 node_modules/
 
 # dist
-public/lib/
-public/main.js
+public/
 
-# lockfiles
-bun.lockb
+# non bun lockfiles
 yarn.lock
 pnpm-lock.yaml
 package-lock.json

@@ -2,9 +2,6 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="lib/pdfkit.js"></script>
-    <script type="text/javascript" src="lib/blob-stream.js"></script>
-    <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
     <p>
@@ -21,6 +18,7 @@
         placeholder="image<serial>, <count>, <size>"
       ></textarea>
     </p>
-    <button onclick="makePDF()">Render PDF</button>
+    <button id="renderPDFButton">Render PDF</button>
+    <script type="module" src="./index.ts"></script>
   </body>
 </html>

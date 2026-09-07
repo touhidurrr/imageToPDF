@@ -14,11 +14,11 @@
   },
   "devDependencies": {
     "@types/blob-stream": "^0.1.33",
-    "@types/bun": "^1.1.11",
-    "@types/pdfkit": "^0.17.0",
+    "@types/bun": "^1.4.1",
+    "@types/pdfkit": "^0.17.6",
     "brfs": "^2.0.2",
     "browserify": "^17.0.1",
-    "prettier": "^3.3.3",
+    "prettier": "^3.9.6",
     "uglify-js": "^3.19.3"
   }
 }

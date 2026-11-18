@@ -7,15 +7,14 @@
   "scripts": {
     "dev": "bun dev src/index.html",
     "build": "bun build src/index.html --outdir public --minify",
-    "format": "prettier --write src *.json *.md"
+    "format": "bun fmt"
   },
   "dependencies": {
     "pdfkit": "^0.20.2"
   },
   "devDependencies": {
-    "@types/bun": "^1.4.1",
-    "@types/pdfkit": "^0.17.6",
-    "prettier": "^3.9.6",
+    "@types/bun": "^1.4.4",
+    "@types/pdfkit": "^0.17.7",
     "typescript": "7.0.2"
   }
 }

@@ -1,0 +1,9 @@
+[run]
+bun = true
+
+[install]
+minimumReleaseAge = "3 days"
+
+[fmt]
+jsdoc = true
+sortPackageJson = true

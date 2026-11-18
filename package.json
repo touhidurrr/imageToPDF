@@ -1,8 +1,8 @@
 {
   "name": "image-to-pdf",
   "version": "1.1.0",
-  "author": "Md. Touhidur Rahman",
   "description": "Converts images to PDF",
+  "author": "Md. Touhidur Rahman",
   "main": "src/index.ts",
   "scripts": {
     "dev": "bun dev src/index.html",
